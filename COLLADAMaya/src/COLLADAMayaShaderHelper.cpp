@@ -19,7 +19,7 @@
 #include <maya/MFnMesh.h>
 //Hack to circumvent bad code in Maya7.0
 
-class MFnNurbsSurface;
+//class MFnNurbsSurface;
 #include <maya/MFnNurbsSurface.h>
 #include <maya/MItDependencyGraph.h>
 #include <maya/MItDependencyNodes.h>

@@ -4269,6 +4269,7 @@
 		1DEB916108733D950010E9CD /* Debug 2008 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = "";
@@ -4297,6 +4298,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2008/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -4326,6 +4328,7 @@
 		1DEB916208733D950010E9CD /* Release 2008 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -4353,6 +4356,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2008/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -4388,10 +4392,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2008;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Debug 2008";
 		};
@@ -4402,10 +4408,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = REQUIRE_IOSTREAM;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2008;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Release 2008";
 		};
@@ -4416,16 +4424,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = REQUIRE_IOSTREAM;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2012;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Release 2012";
 		};
 		2425149114A3B26200A60B09 /* Release 2012 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -4453,6 +4464,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2012/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -4599,6 +4611,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					MAC_PLUGIN,
@@ -4608,6 +4621,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -4620,16 +4638,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2015;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx10.9;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Debug 2016";
 		};
 		323857C01B09C04000571BB2 /* Debug 2016 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = "";
@@ -4661,6 +4682,7 @@
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
 				MAYA_PATH = /Applications/Autodesk/maya2015;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -4795,6 +4817,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
 					MAC_PLUGIN,
@@ -4804,6 +4827,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -4816,10 +4844,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = REQUIRE_IOSTREAM;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2016;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx10.9;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Release 2016";
 		};
@@ -4827,6 +4857,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -4855,6 +4886,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2015/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -5001,6 +5033,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					MAC_PLUGIN,
@@ -5010,6 +5043,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -5022,10 +5060,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = REQUIRE_IOSTREAM;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2017;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx10.9;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Release 2017";
 		};
@@ -5033,6 +5073,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -5061,6 +5102,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2015/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -5207,6 +5249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					MAC_PLUGIN,
@@ -5216,6 +5259,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -5228,16 +5276,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2017;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx10.9;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Debug 2017";
 		};
 		3263AFB31D654B4E002FC311 /* Debug 2017 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = "";
@@ -5269,6 +5320,7 @@
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
 				MAYA_PATH = /Applications/Autodesk/maya2015;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -5403,6 +5455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
 					MAC_PLUGIN,
@@ -5413,9 +5466,234 @@
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
+				);
 				PRODUCT_NAME = dae2ma;
 			};
 			name = "Debug 2017";
+		};
+		416854E120B763D400F27628 /* Release 2018 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = REQUIRE_IOSTREAM;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MAYA_PATH = /Applications/Autodesk/maya2017;
+				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
+			};
+			name = "Release 2018";
+		};
+		416854E220B763D400F27628 /* Release 2018 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				EXECUTABLE_EXTENSION = bundle;
+				FRAMEWORK_SEARCH_PATHS = "\"$(MAYA_PATH)/Maya.app/Contents/Frameworks\"";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					CREATE_IMPORT_PLUGIN,
+					MAC_PLUGIN,
+					NDEBUG,
+					OSMac_,
+					REQUIRE_IOSTREAM,
+					GLUT_NO_LIB_PRAGMA,
+					CM_EXPORTS,
+					GLUT_NO_WARNING_DISABLE,
+					_CRT_NONSTDC_NO_DEPRECATE,
+					_BOOL,
+				);
+				HEADER_SEARCH_PATHS = (
+					../COLLADABaseUtils/include,
+					../Externals/LibXML/include,
+					../Externals/MayaDataModel/include,
+					"$(MAYA_PATH)/devkitBase/devkit/plug-ins",
+					"$(MAYA_PATH)/devkitBase/include",
+					"$(MAYA_PATH)/devkitBase/devkit/plug-ins/cgFx",
+				);
+				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2018/plug-ins";
+				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
+				MACH_O_TYPE = mh_dylib;
+				MAYA_PATH = /Applications/Autodesk/maya2018;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = (
+					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
+					"-lOpenMaya",
+					"-lFoundation",
+					"-lOpenMayaUI",
+					"-lOpenMayaAnim",
+					"-lOpenMayaRender",
+					"-lCOLLADAStreamWriter",
+					"-lCOLLADABaseUtils",
+					"-lCOLLADAFramework",
+					"-lCOLLADASaxFrameworkLoader",
+					"-lGeneratedSaxParser",
+					"-llibftoa",
+					"-llibBuffer",
+					"-ldae2ma",
+					"-lpcre",
+					"-lMathMLSolver",
+					"-lxml2",
+					"-shared",
+					"-framework",
+					Cg,
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
+				);
+				PRODUCT_NAME = COLLADAMaya;
+				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = "Release 2018";
+		};
+		416854E320B763D400F27628 /* Release 2018 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OSMac_,
+					REQUIRE_IOSTREAM,
+					NDEBUG,
+				);
+				HEADER_SEARCH_PATHS = ../COLLADABaseUtils/include;
+				PRODUCT_NAME = COLLADAStreamWriter;
+			};
+			name = "Release 2018";
+		};
+		416854E420B763D400F27628 /* Release 2018 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					REQUIRE_IOSTREAM,
+					NDEBUG,
+					OSMac_,
+				);
+				HEADER_SEARCH_PATHS = (
+					../Externals/UTF/include,
+					../COLLADABaseUtils/include,
+				);
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = COLLADABaseUtils;
+			};
+			name = "Release 2018";
+		};
+		416854E520B763D400F27628 /* Release 2018 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OSMac_,
+					NDEBUG,
+					REQUIRE_IOSTREAM,
+				);
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				PRODUCT_NAME = GeneratedSaxParser;
+			};
+			name = "Release 2018";
+		};
+		416854E620B763D400F27628 /* Release 2018 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OSMac_,
+					NDEBUG,
+					REQUIRE_IOSTREAM,
+				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../COLLADABaseUtils/include\"";
+				PRODUCT_NAME = COLLADAFramework;
+			};
+			name = "Release 2018";
+		};
+		416854E720B763D400F27628 /* Release 2018 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OSMac_,
+					REQUIRE_IOSTREAM,
+					NDEBUG,
+					GENERATEDSAXPARSER_XMLPARSER_LIBXML,
+				);
+				HEADER_SEARCH_PATHS = (
+					../COLLADABaseUtils/include/,
+					/usr/include/libxml2,
+				);
+				PRODUCT_NAME = COLLADASaxFrameworkLoader;
+			};
+			name = "Release 2018";
+		};
+		416854E820B763D400F27628 /* Release 2018 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_NAME = pcre;
+			};
+			name = "Release 2018";
+		};
+		416854E920B763D400F27628 /* Release 2018 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_NAME = MathMLSolver;
+			};
+			name = "Release 2018";
+		};
+		416854EA20B763D400F27628 /* Release 2018 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_NAME = libftoa;
+			};
+			name = "Release 2018";
+		};
+		416854EB20B763D400F27628 /* Release 2018 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					../common/libftoa/include,
+					../Externals/UTF/include,
+				);
+				PRODUCT_NAME = libBuffer;
+			};
+			name = "Release 2018";
+		};
+		416854EC20B763D400F27628 /* Release 2018 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					MAC_PLUGIN,
+					OSMac_,
+				);
+				HEADER_SEARCH_PATHS = (
+					../COLLADABaseUtils/include,
+					../COLLADASaxFrameworkLoader/include,
+					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
+				);
+				PRODUCT_NAME = dae2ma;
+			};
+			name = "Release 2018";
 		};
 		A3ED9FE417A63E660036CBBF /* Debug 2014 */ = {
 			isa = XCBuildConfiguration;
@@ -5424,16 +5702,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2014;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Debug 2014";
 		};
 		A3ED9FE517A63E660036CBBF /* Debug 2014 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = "";
@@ -5464,6 +5745,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2014/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -5598,6 +5880,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
 					MAC_PLUGIN,
@@ -5607,6 +5890,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -5619,16 +5907,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = REQUIRE_IOSTREAM;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2014;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Release 2014";
 		};
 		A3ED9FF117A63E6F0036CBBF /* Release 2014 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -5657,6 +5948,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2014/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -5803,6 +6095,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					MAC_PLUGIN,
@@ -5812,6 +6105,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -5824,16 +6122,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2015;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx10.9;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Debug 2015";
 		};
 		A5155DFE19F7881600D5D4DC /* Debug 2015 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = "";
@@ -5865,6 +6166,7 @@
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
 				MAYA_PATH = /Applications/Autodesk/maya2015;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -5999,6 +6301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
 					MAC_PLUGIN,
@@ -6008,6 +6311,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -6020,16 +6328,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = REQUIRE_IOSTREAM;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2015;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx10.9;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Release 2015";
 		};
 		A5155E0A19F7881D00D5D4DC /* Release 2015 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -6058,6 +6369,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2015/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -6204,6 +6516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					MAC_PLUGIN,
@@ -6213,6 +6526,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -6506,6 +6824,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
 					MAC_PLUGIN,
@@ -6515,6 +6834,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -6524,6 +6848,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
 					MAC_PLUGIN,
@@ -6533,6 +6858,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -6542,6 +6872,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
 					MAC_PLUGIN,
@@ -6552,6 +6883,11 @@
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
+				);
 				PRODUCT_NAME = dae2ma;
 			};
 			name = "Debug 2010";
@@ -6560,6 +6896,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					MAC_PLUGIN,
@@ -6569,6 +6906,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -6578,6 +6920,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					MAC_PLUGIN,
@@ -6587,6 +6930,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -6596,6 +6944,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					MAC_PLUGIN,
@@ -6605,6 +6954,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -6617,16 +6971,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2010;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Debug 2010";
 		};
 		CE7456DC104CF657000083A6 /* Debug 2010 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = "";
@@ -6656,6 +7013,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2010/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -6773,16 +7131,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = REQUIRE_IOSTREAM;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2010;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Release 2010";
 		};
 		CE7456E5104CF660000083A6 /* Release 2010 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -6810,6 +7171,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2010/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -7103,16 +7465,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2009;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Debug 2009";
 		};
 		CE84B2D90E9F7BF400728F47 /* Debug 2009 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = "";
@@ -7142,6 +7507,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2009/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -7189,16 +7555,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = REQUIRE_IOSTREAM;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2009;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Release 2009";
 		};
 		CE84B3340E9F96D600728F47 /* Release 2009 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -7226,6 +7595,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2009/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -7275,16 +7645,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = REQUIRE_IOSTREAM;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2013;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Release 2013";
 		};
 		CEACFB5616D52459004EA121 /* Release 2013 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -7312,6 +7685,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2013/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -7458,6 +7832,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					MAC_PLUGIN,
@@ -7467,6 +7842,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -7479,16 +7859,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = REQUIRE_IOSTREAM;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2011;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Release 2011";
 		};
 		CEACFB6216D52460004EA121 /* Release 2011 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -7519,6 +7902,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2011/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -7665,6 +8049,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					MAC_PLUGIN,
@@ -7674,6 +8059,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -7686,16 +8076,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2011;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Debug 2011";
 		};
 		CEACFB6E16D5246D004EA121 /* Debug 2011 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = "";
@@ -7725,6 +8118,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2011/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -7859,6 +8253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
 					MAC_PLUGIN,
@@ -7868,6 +8263,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -7880,16 +8280,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2012;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Debug 2012";
 		};
 		CEACFB7A16D52475004EA121 /* Debug 2012 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = "";
@@ -7919,6 +8322,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2012/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -8053,6 +8457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
 					MAC_PLUGIN,
@@ -8062,6 +8467,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -8074,16 +8484,19 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MAYA_PATH = /Applications/Autodesk/maya2013;
 				New_Setting = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = "Debug 2013";
 		};
 		CEACFB8616D52479004EA121 /* Debug 2013 */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = "";
@@ -8112,6 +8525,7 @@
 				INSTALL_PATH = "/Users/Shared/Autodesk/maya/2013/plug-ins";
 				LIBRARY_SEARCH_PATHS = "$(MAYA_PATH)/Maya.app/Contents/MacOS";
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
 					"-Wl,-executable_path,$(MAYA_PATH)/Maya.app/Contents/MacOS",
 					"-lOpenMaya",
@@ -8246,6 +8660,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
 					MAC_PLUGIN,
@@ -8255,6 +8670,11 @@
 					../COLLADABaseUtils/include,
 					../COLLADASaxFrameworkLoader/include,
 					"\"$(SRCROOT)/../Externals/MayaDataModel/include/\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lSystem",
+					"/usr/lib/libstdc++.dylib",
 				);
 				PRODUCT_NAME = dae2ma;
 			};
@@ -8286,6 +8706,7 @@
 				A5155E0A19F7881D00D5D4DC /* Release 2015 */,
 				323857CC1B09C04A00571BB2 /* Release 2016 */,
 				3263AFA71D654A98002FC311 /* Release 2017 */,
+				416854E220B763D400F27628 /* Release 2018 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 2015";
@@ -8313,6 +8734,7 @@
 				A5155E0919F7881D00D5D4DC /* Release 2015 */,
 				323857CB1B09C04A00571BB2 /* Release 2016 */,
 				3263AFA61D654A98002FC311 /* Release 2017 */,
+				416854E120B763D400F27628 /* Release 2018 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 2015";
@@ -8340,6 +8762,7 @@
 				A5155E0C19F7881D00D5D4DC /* Release 2015 */,
 				323857CE1B09C04A00571BB2 /* Release 2016 */,
 				3263AFA91D654A98002FC311 /* Release 2017 */,
+				416854E420B763D400F27628 /* Release 2018 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 2015";
@@ -8367,6 +8790,7 @@
 				A5155E1019F7881D00D5D4DC /* Release 2015 */,
 				323857D21B09C04A00571BB2 /* Release 2016 */,
 				3263AFAD1D654A98002FC311 /* Release 2017 */,
+				416854E820B763D400F27628 /* Release 2018 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 2015";
@@ -8394,6 +8818,7 @@
 				A5155E0B19F7881D00D5D4DC /* Release 2015 */,
 				323857CD1B09C04A00571BB2 /* Release 2016 */,
 				3263AFA81D654A98002FC311 /* Release 2017 */,
+				416854E320B763D400F27628 /* Release 2018 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 2015";
@@ -8421,6 +8846,7 @@
 				A5155E1119F7881D00D5D4DC /* Release 2015 */,
 				323857D31B09C04A00571BB2 /* Release 2016 */,
 				3263AFAE1D654A98002FC311 /* Release 2017 */,
+				416854E920B763D400F27628 /* Release 2018 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 2015";
@@ -8448,6 +8874,7 @@
 				A5155E1219F7881D00D5D4DC /* Release 2015 */,
 				323857D41B09C04A00571BB2 /* Release 2016 */,
 				3263AFAF1D654A98002FC311 /* Release 2017 */,
+				416854EA20B763D400F27628 /* Release 2018 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 2015";
@@ -8475,6 +8902,7 @@
 				A5155E1319F7881D00D5D4DC /* Release 2015 */,
 				323857D51B09C04A00571BB2 /* Release 2016 */,
 				3263AFB01D654A98002FC311 /* Release 2017 */,
+				416854EB20B763D400F27628 /* Release 2018 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 2015";
@@ -8502,6 +8930,7 @@
 				A5155E1419F7881D00D5D4DC /* Release 2015 */,
 				323857D61B09C04B00571BB2 /* Release 2016 */,
 				3263AFB11D654A98002FC311 /* Release 2017 */,
+				416854EC20B763D400F27628 /* Release 2018 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 2015";
@@ -8529,6 +8958,7 @@
 				A5155E0D19F7881D00D5D4DC /* Release 2015 */,
 				323857CF1B09C04A00571BB2 /* Release 2016 */,
 				3263AFAA1D654A98002FC311 /* Release 2017 */,
+				416854E520B763D400F27628 /* Release 2018 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 2015";
@@ -8556,6 +8986,7 @@
 				A5155E0E19F7881D00D5D4DC /* Release 2015 */,
 				323857D01B09C04A00571BB2 /* Release 2016 */,
 				3263AFAB1D654A98002FC311 /* Release 2017 */,
+				416854E620B763D400F27628 /* Release 2018 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 2015";
@@ -8583,6 +9014,7 @@
 				A5155E0F19F7881D00D5D4DC /* Release 2015 */,
 				323857D11B09C04A00571BB2 /* Release 2016 */,
 				3263AFAC1D654A98002FC311 /* Release 2017 */,
+				416854E720B763D400F27628 /* Release 2018 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release 2015";

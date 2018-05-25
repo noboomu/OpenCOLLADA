@@ -27,9 +27,9 @@
 class MGLFunctionTable;
 */
 
-#ifdef OSMac_
-#include <maya/OpenMayaMac.h>
-#endif
+//#ifdef OSMac_
+//#include <maya/OpenMayaMac.h>
+//#endif
 
 //STL
 #include <vector>

@@ -30,9 +30,8 @@
 #include "COLLADASWException.h"
 
 #include "COLLADABUVersionInfo.h"
-
+#include <sys/param.h>
 #include <time.h>
-
 #include <maya/MFnPlugin.h>
 #include <maya/MItDependencyNodes.h>
 #include <maya/MFnDependencyNode.h>
